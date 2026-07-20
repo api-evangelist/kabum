@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+docs: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+note: >-
+  KaBuM!'s Marketplace Seller Integration API is operated on the Mirakl platform
+  (production host marketplace-kabum.mirakl.net, development host
+  kabum-dev.mirakl.net). No OpenAPI is published by KaBuM!; this profile is
+  derived from KaBuM!'s public seller integration documentation. Authentication
+  is API-key based — each seller generates an API key in the Mirakl seller
+  account settings and sends it on every request.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+- name: MiraklApiKey
+  type: apiKey
+  in: header
+  description: >-
+    Seller API key generated in the Mirakl marketplace account under user
+    settings -> "Chave de API" -> "Gerar uma nova chave de API". Sent as an
+    authorization header on every request to the marketplace API. Keys can be
+    temporarily blocked if rate limits are exceeded.
+  provisioning: https://kabum-dev.mirakl.net/login
+  sources:
+  - https://www.kabum.com.br/hotsite/documentacao-hubscore/
+environments:
+- name: production
+  host: https://marketplace-kabum.mirakl.net
+- name: development
+  host: https://kabum-dev.mirakl.net

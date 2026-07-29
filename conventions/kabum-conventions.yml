@@ -1,0 +1,66 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+docs: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+note: >-
+  Cross-cutting request/response semantics for the KaBuM! Marketplace Seller
+  Integration API, captured from KaBuM!'s public integration documentation. The
+  API is operated on the Mirakl platform; KaBuM! does not publish an OpenAPI
+  definition, so these conventions are documented rather than derived from a
+  spec.
+authentication:
+  style: api-key
+  location: header
+  detail: >-
+    Seller-generated Mirakl API key sent on every request. See
+    authentication/kabum-authentication.yml.
+idempotency:
+  supported: true
+  scope: write operations (POST, PUT)
+  detail: >-
+    KaBuM!'s integration guidance instructs integrators to implement idempotency
+    for all write operations (product imports, offer imports, order updates,
+    tracking/ship confirmation) so that safe retries do not create duplicate
+    records. Import operations are asynchronous and return an import id, which is
+    the natural idempotency/dedup handle for retry scenarios.
+  header: null
+pagination:
+  style: job-polling
+  detail: >-
+    Bulk product and offer operations are asynchronous: a POST creates an import
+    job that returns an import_id, and clients poll GET
+    /api/products/imports/{import_id} (and the error_report endpoint) until the
+    job completes. Incremental synchronization of orders and offers uses
+    timestamp-based (date) filters rather than page/cursor pagination.
+  params:
+  - import_id
+  - order_state_codes
+  - date filters (timestamp-based incremental sync)
+versioning:
+  scheme: uri-path
+  detail: >-
+    Endpoints are namespaced under /api on the marketplace host (Mirakl MMP/MCM
+    REST APIs). No dated or header-based version negotiation is documented on
+    KaBuM!'s side.
+error_handling:
+  detail: >-
+    Import jobs expose a machine-readable error_report
+    (GET /api/products/imports/{id}/error_report). Integration guidance
+    recommends translating technical API error responses into human-readable
+    messages in seller-facing UIs and retaining import_id values and error
+    reports for 30+ days.
+rate_limiting:
+  signaled: false
+  guidance: >-
+    KaBuM! documents polling-interval guidance (recommended ~5 minutes for
+    offers and a 1-minute minimum for status checks) and warns that exceeding
+    call limits can temporarily block the seller's API key. No numeric
+    rate-limit headers are documented.
+limits:
+  max_upload_mb: 5
+  max_skus_per_json_call: 50
+  file_import_threshold: 100
+  encoding: UTF-8
+cross_links:
+  authentication: authentication/kabum-authentication.yml
+  domain_security: security/kabum-domain-security.yml

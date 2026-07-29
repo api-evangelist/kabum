@@ -1,8 +1,18 @@
 aid: kabum
 name: KaBum!
-description: 'KaBum! is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: education. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  KaBuM! is the largest e-commerce retailer of technology, computer hardware,
+  electronics, and games in Latin America, headquartered in Limeira, Brazil and
+  part of the Magalu (Magazine Luiza) group. Beyond its consumer storefront,
+  KaBuM! operates a third-party seller marketplace on the Mirakl platform and
+  publishes an integration guide for sellers and integrators to connect their
+  ERP/OMS to the marketplace via a REST API — managing product catalog,
+  attribute mapping, offers (price/stock), order retrieval, shipping carriers,
+  document uploads, and tracking/ship confirmation. Authentication is API-key
+  based, write operations are expected to be idempotent, and integrations poll
+  asynchronous import jobs by id. This profile was added to the API Evangelist
+  network from a VC portfolio lead and enriched from KaBuM!'s public integration
+  documentation.
 url: https://raw.githubusercontent.com/api-evangelist/kabum/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +20,59 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://logo.clearbit.com/kabum.com.br
 tags:
 - Company
-- Education
-apis: []
+- E-Commerce
+- Retail
+- Marketplace
+- Technology
+- Electronics
+- Games
+- Brazil
+- Seller Integration
+- Mirakl
+apis:
+- name: KaBuM! Marketplace Seller Integration API
+  description: >-
+    REST API for third-party sellers and integrators to connect to the KaBuM!
+    marketplace (operated on the Mirakl platform). Covers category hierarchies,
+    product attribute mapping, product and offer imports, order retrieval,
+    custom fields, document uploads, shipping carriers, and tracking/ship
+    confirmation. Uses API-key authentication and asynchronous import jobs with
+    id-based polling; write operations should be idempotent.
+  humanURL: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+  baseURL: https://marketplace-kabum.mirakl.net/api
+  tags:
+  - Marketplace
+  - Seller Integration
+  - E-Commerce
+  - Orders
+  - Catalog
+  properties:
+  - type: Documentation
+    url: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+  - type: Authentication
+    url: authentication/kabum-authentication.yml
+  - type: Conventions
+    url: conventions/kabum-conventions.yml
+  - type: Idempotency
+    url: conventions/kabum-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +80,31 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.kabum.com.br/
+  url: https://www.kabum.com.br/
+- type: DeveloperPortal
+  url: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+- type: Documentation
+  url: https://www.kabum.com.br/hotsite/documentacao-hubscore/
+- type: SignUp
+  url: https://marketplace-kabum.mirakl.net/login
+- type: Support
+  url: https://www.kabum.com.br/atendimento
+- type: Blog
+  url: https://www.kabum.com.br/blog
+- type: TermsOfService
+  url: https://www.kabum.com.br/termos-de-uso
+- type: PrivacyPolicy
+  url: https://www.kabum.com.br/privacidade
+- type: Authentication
+  url: authentication/kabum-authentication.yml
+- type: Conventions
+  url: conventions/kabum-conventions.yml
+- type: Idempotency
+  url: conventions/kabum-conventions.yml
+- type: DomainSecurity
+  url: security/kabum-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

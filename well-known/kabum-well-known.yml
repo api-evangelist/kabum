@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/* on KaBuM! hosts
+note: >-
+  Probed the standard /.well-known/ discovery surface on the KaBuM! storefront
+  host (www.kabum.com.br) and the Mirakl marketplace host
+  (marketplace-kabum.mirakl.net). No documents were served — the hosts sit
+  behind a WAF/CDN that refuses non-browser requests to these paths, and no
+  well-known discovery surface is published. Absence recorded so a later run
+  does not re-probe. No WellKnown/SecurityTxt scoring pointer is emitted because
+  nothing was found.
+hosts:
+- host: https://www.kabum.com.br
+  documents:
+  - {path: /.well-known/security.txt, status: unreachable}
+  - {path: /.well-known/openid-configuration, status: unreachable}
+  - {path: /.well-known/oauth-authorization-server, status: unreachable}
+  - {path: /.well-known/api-catalog, status: unreachable}
+  - {path: /.well-known/ai-plugin.json, status: unreachable}
+- host: https://marketplace-kabum.mirakl.net
+  documents:
+  - {path: /.well-known/security.txt, status: unreachable}
+  - {path: /.well-known/openid-configuration, status: unreachable}
+  - {path: /.well-known/oauth-authorization-server, status: unreachable}
+  - {path: /.well-known/api-catalog, status: unreachable}
+  - {path: /.well-known/ai-plugin.json, status: unreachable}
+documents: []

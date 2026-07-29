@@ -1,0 +1,14 @@
+{
+  "repo": "kabum",
+  "feeds": [
+    {
+      "source": "https://www.kabum.com.br/atendimento",
+      "feed_url": "https://www.kabum.com.br/atendimento",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

@@ -62,6 +62,12 @@ apis:
   - Marketplace
   - Seller Integration
   - E-Commerce
+  - Order
+  - Catalog
+  tags_raw:
+  - Marketplace
+  - Seller Integration
+  - E-Commerce
   - Orders
   - Catalog
   properties:

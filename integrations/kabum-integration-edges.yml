@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/kabum/integrations
 - https://n8n.io/integrations/kabum/
@@ -10,7 +10,27 @@ checked:
 - https://monid.ai/tools/kabum
 - https://n8n.io/integrations/kabum/
 - https://zapier.com/apps/kabum/integrations
+- discord/integrations/discord-integration-edges.yml
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Discord (discord-app-directory)
+  partner: discord
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: discord-app-directory
+  evidence: https://discord.com/discovery/applications/1409424266155266208
+  mirror_of: discord/integrations/discord-integration-edges.yml
+  apps:
+  - LDDA by KaBuM!
+  listing_count: 1
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Games, Entertainment, Social
+  publisher_verified:
+  - discord-verified-app
 templates: []

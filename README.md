@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-KaBum! is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: education. This profile is a lead awaiting the enrichment pipeline.
+KaBuM! is the largest e-commerce retailer of technology, computer hardware, electronics, and games in Latin America, headquartered in Limeira, Brazil and part of the Magalu (Magazine Luiza) group. Beyond its consumer storefront, KaBuM! operates a third-party seller marketplace on the Mirakl platform and publishes an integration guide for sellers and integrators to connect their ERP/OMS to the marketplace via a REST API — managing product catalog, attribute mapping, offers (price/stock), order retrieval, shipping carriers, document uploads, and tracking/ship confirmation. Authentication is API-key based, write operations are expected to be idempotent, and integrations poll asynchronous import jobs by id. This profile was added to the API Evangelist network from a VC portfolio lead and enriched from KaBuM!'s public integration documentation.
 
-Backed by: insight-partners — http://www.kabum.com.br/
+**Areas:** Company · E-Commerce · Retail · Marketplace · Technology · Electronics · Games · Brazil · Seller Integration · Mirakl
+
+## KaBum! on APIs.io
+
+Everything profiled for KaBum! is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kabum/](https://apis.io/providers/kabum/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [KaBuM! Marketplace Seller Integration API](https://apis.io/apis/kabum/kabum-marketplace-seller-integration-api/) — REST API for third-party sellers and integrators to connect to the KaBuM! marketplace (operated on the Mirakl platform). Covers category hierarchies,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kabum Authentication](https://apis.io/security/kabum/kabum-authentication/)
+- [Kabum Domain Security](https://apis.io/security/kabum/kabum-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.kabum.com.br/)
+- [Documentation](https://www.kabum.com.br/hotsite/documentacao-hubscore/)
+- [Sign up](https://marketplace-kabum.mirakl.net/login)
+- [Support](https://www.kabum.com.br/atendimento)
+- [Blog](https://www.kabum.com.br/blog)
+- [Terms of service](https://www.kabum.com.br/termos-de-uso)
+- [Privacy policy](https://www.kabum.com.br/privacidade)
+
+## API Evangelist rating
+
+**Kin Score 18.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 23.7 |
+
+**Agent readiness 5.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kabum/](https://apis.io/providers/kabum/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for KaBum!: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kabum/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
